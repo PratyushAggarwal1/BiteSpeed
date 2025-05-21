@@ -21,7 +21,7 @@ model Contact {
   linkPrecedence LinkPrecedence // Enum defined below
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
-  deletedAt      DateTime? // For soft deletes, though not strictly required by spec
+  //deletedAt      DateTime? // For soft deletes, though not strictly required by spec
 
   // Self-relation for linkedId
   linkedContact  Contact?  @relation("ContactLinks", fields: [linkedId], references: [id])
